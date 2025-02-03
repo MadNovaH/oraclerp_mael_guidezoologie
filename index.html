@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guilde du Zoologiste</title>
+  <style>
+    /* Importation de la police inspirée de WoW */
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:ital@0;1&display=swap');
+
+    /* Style global du body */
+    body {
+      font-family: 'UnifrakturCook', cursive;
+      background: linear-gradient(180deg, #0c0c1e 0%, #1a1a36 100%), url('https://wow.zamimg.com/images/logos/world-of-warcraft.svg') no-repeat center top;
+      background-size: contain;
+      color: #ffcc00;
+      margin: 0;
+      padding: 20px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    header {
+      text-align: center;
+      padding: 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-bottom: 3px solid #4b4b4b;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffcc00;
+      text-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+    }
+
+    header p {
+      font-size: 1.5em;
+      margin: 0;
+      color: #ffcc00;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Style de la navbar */
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+      border-bottom: 2px solid #ffcc00;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 25px;
+    }
+
+    nav ul li a {
+      color: #ffcc00;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #2d2d2d;
+      border: 2px solid #ffcc00;
+      border-radius: 10px;
+      font-size: 1.2em;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    nav ul li a:hover {
+      background-color: #4b4b4b;
+      transform: scale(1.1);
+    }
+
+    /* Style des sections */
+    .section {
+      display: none;
+      margin-top: 30px;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .active {
+      display: block;
+    }
+
+    h2 {
+      color: #ffcc00;
+      font-size: 2.5em;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      margin-top: 0;
+    }
+
+    p, li {
+      font-size: 1.2em;
+      line-height: 1.5em;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #2d2d2d;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      color: #ffcc00;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Guilde du Zoologiste</h1>
+    <p>Un guide complet pour l'analyse de la faune.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="javascript:void(0);" onclick="showSection('intro')">Introduction</a></li>
+      <li><a href="javascript:void(0);" onclick="showSection('protocoles')">Protocoles</a></li>
+      <li><a href="javascript:void(0);" onclick="showSection('methode')">Méthodes</a></li>
+      <li><a href="javascript:void(0);" onclick="showSection('archives')">Archives</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sections du site -->
+  <div id="intro" class="section">
+    <h2>Introduction</h2>
+    <p>
+        Bienvenue dans le guide du zoologiste. Ce guide vous permettra de mieux comprendre la faune et de mieux l'analyser. Si vous trouvez que certaines méthodes ne sont pas appropriées, n'hésitez pas à en discuter avec nous !
+    </p>
+  </div>
+
+  <div id="protocoles" class="section">
+    <h2>Protocoles de Recherche sur la Faune d'Azeroth</h2>
+    <p>
+      Les protocoles pour analyser la faune d'Azeroth doivent être rigoureux, respectueux des équilibres écologiques et menés avec une profonde considération pour les créatures que l'on étudie. Durant cette période d'exploration et de découverte, il est essentiel de ne pas perturber les écosystèmes existants tout en étudiant les créatures de manière éthique et scientifique. Voici les étapes essentielles pour mener vos recherches :
+    </p>
+    <ul>
+      <li><strong>Observation des créatures sans interférence :</strong> Il est primordial de ne jamais interagir directement avec les créatures que vous observez. L’objectif est de comprendre leurs comportements dans leur habitat naturel sans les perturber. Même si une créature est attaquée ou subit une situation dangereuse, il est important de ne pas intervenir, car cela fait partie du cycle naturel que l'on cherche à observer et comprendre.</li>
+      <li><strong>Capture, marquage et recapture sans causer de tort :</strong> Lors de la capture d'une créature pour étude, il est essentiel de ne pas infliger de blessures. Les créatures blessées fausseraient les résultats de vos recherches et perturbent l’équilibre écologique. Utilisez des techniques adaptées, rapides et douces pour capturer sans infliger de douleur. Avant de relâcher l'animal, assurez-vous qu'il est en bonne santé et capable de reprendre sa place dans l'écosystème.</li>
+      <li><strong>Minimisation de l'impact environnemental :</strong> Les recherches doivent être menées avec un maximum de respect pour les habitats naturels. Ne dérangez pas les zones sensibles, telles que les terrains de reproduction ou de repos des créatures locales. L’objectif est de ne pas perturber la faune locale, et il est crucial de ne pas déplacer des créatures de leur habitat naturel, ce qui pourrait nuire à leur survie et perturber l’équilibre de l’écosystème.</li>
+      <li><strong>Respect de la biodiversité :</strong> Ne capturez pas des créatures rares ou potentiellement dangereuses, à moins que cela soit absolument nécessaire pour la recherche et que vous ayez obtenu l’autorisation des autorités compétentes. Soyez particulièrement vigilant pour éviter d’introduire des espèces invasives ou des pathogènes dans des régions encore peu explorées.</li>
+      <li><strong>Limitation du stress pour les créatures :</strong> Il est impératif de réduire au minimum la durée des interactions avec les créatures étudiées. Les moments de capture, marquage ou observation prolongée doivent être limités aux stricts nécessaires pour obtenir les informations essentielles. Utilisez des outils comme des pièges magiques ou des lunettes d’observation pour étudier les créatures sans les perturber dans leur comportement naturel.</li>
+      <li><strong>Suivi de l'état de santé des créatures :</strong> Après chaque capture ou observation, effectuez un suivi pour vérifier que l'intervention humaine n’a pas eu d’effets secondaires. Assurez-vous que les créatures puissent retourner dans leur habitat naturel sans souffrir d'aucun traumatisme ou maladie. Notez également tout changement observé dans leur comportement ou leur santé après l’intervention.</li>
+      <li><strong>Documentation détaillée et éthique :</strong> Toutes les découvertes doivent être minutieusement documentées, en précisant les méthodes utilisées, les conditions d’observation, et les effets de l'interaction humaine sur les créatures. Cette documentation permet de maintenir l'intégrité scientifique des recherches et garantit que les résultats obtenus sont fiables et respectueux de la faune.</li>
+      <li><strong>Obtention d'autorisations et respect des protocoles éthiques :</strong> Avant de commencer toute étude sur les créatures, il est essentiel d’obtenir l’approbation des autorités locales, telles que les druides ou les chefs de clans, en fonction de la région. Respectez les protocoles éthiques établis et formez les équipes de terrain pour garantir que les créatures et leurs habitats sont protégés durant toute la durée de l'étude.</li>
+    </ul>
+  </div>  
+
+  <div id="methode" class="section">
+    <h2>Méthodes d'Analyse</h2>
+    <p>
+      Les méthodes utilisées pour analyser un échantillon et étudier la faune d'Azeroth sont diverses et combinent à la fois des outils magiques et des techniques plus traditionnelles. Ces méthodes permettent de comprendre la diversité biologique, la richesse des populations et les facteurs qui influencent les comportements et l’adaptation des créatures. Voici les approches essentielles utilisées lors de ces recherches :
+    </p>
+    <ul>
+      <li><strong>Examen en laboratoire magique :</strong> L'utilisation de sorts de détection, comme les incantations de révélation de structure ou les magies d'analyse élémentaire, permet d'obtenir des informations détaillées sur la composition des échantillons. Ces sorts révèlent des caractéristiques invisibles, comme la texture interne, la composition minérale ou organique, et permettent de détecter des anomalies ou des influences externes (comme des traces de magie ou de poison). Cela permet de comprendre comment les créatures interagissent avec leur environnement ou comment des facteurs extérieurs peuvent affecter leur biologie.</li>
+      <li><strong>Analyse physique avec des instruments magiques et non-magiques :</strong> Les instruments, tels que les loupe magique, les cristaux d’agrandissement ou les outils d’analyse alchimique, permettent de faire des observations détaillées des échantillons collectés. Avec une loupe magique, par exemple, vous pouvez analyser la fermeté, la pigmentation et la texture des échantillons pour détecter des différences entre individus ou entre espèces. Ces observations permettent ensuite de comparer les échantillons et de déterminer si des changements comportementaux ou environnementaux ont influencé ces caractéristiques.</li>
+      <li><strong>Dissection et observation des comportements :</strong> Lorsque cela est possible, une dissection propre et minutieuse des échantillons (plumes, poils, écailles, etc.) peut révéler des informations internes sur la physiologie de la créature, telles que des différences dans les organes ou les systèmes. Cette méthode est particulièrement utile pour les créatures qui ne sont pas encore bien comprises. Parallèlement, l'observation directe des comportements dans leur habitat naturel permet de comprendre comment les créatures réagissent à leur environnement, à leurs congénères et aux prédateurs. Ces comportements peuvent également être comparés aux résultats de l'analyse physique pour mieux comprendre les liens entre biologie et comportement.</li>
+      <li><strong>Capture, marquage et recapture (CMR) :</strong> La méthode de <strong>Capture, Marquage et Recapture (CMR)</strong> est un outil puissant pour estimer la taille des populations et analyser les comportements des créatures dans leur environnement naturel. Elle repose sur l'idée que si une proportion d'individus d'une population est marquée lors de la première capture, puis relâchée, on peut estimer la taille totale de la population en capturant à nouveau un certain nombre d’individus, et en comptant combien d’entre eux portent des marques.
+        <h3>Procédure de Capture, Marquage et Recapture</h3>
+        <ul>
+          <li><strong>Première capture :</strong> Dans un premier temps, capturez un échantillon de créatures dans une zone d’étude. Utilisez des pièges magiques, des charmes d’attraction ou d’autres méthodes qui ne perturbent pas trop l’environnement. Assurez-vous de ne pas capturer trop d'individus pour ne pas fausser les résultats. L’objectif est d’obtenir un échantillon représentatif de la population sans l’épuiser.</li>
+          <li><strong>Marquage :</strong> Après avoir capturé les créatures, appliquez un marquage magique discret mais durable sur chaque individu (par exemple, une rune invisibile, un cristal magique ou une couleur de sort spéciale). Ce marquage doit être unique à chaque échantillon, mais ne doit pas affecter le comportement ou la santé des créatures. Assurez-vous que le marquage ne les rend pas vulnérables aux prédateurs ou perturbateurs d’un autre type.</li>
+          <li><strong>Relâcher les créatures :</strong> Une fois marquées, relâchez immédiatement les créatures dans leur habitat naturel. Laissez-leur le temps de se réadapter à leur environnement sans stress. Il est important de les laisser se mélanger à nouveau au reste de la population avant de procéder à la phase de recapture.</li>
+          <li><strong>Recapture :</strong> Après un certain temps, retournez dans la même zone et capturez un autre échantillon d’individus, tout en notant combien d'entre eux portent des marques. Ce nombre d’individus marqués est un élément crucial pour le calcul de la population totale.</li>
+          <li><strong>Calcul de la population :</strong> L'estimation de la population totale peut être faite grâce à la formule suivante :
+            <p style="text-align: center;">
+              <strong>N = (M * C) / R</strong>
+            </p>
+            où :<br>
+            - <strong>N</strong> représente la population estimée.<br>
+            - <strong>M</strong> est le nombre d’individus marqués lors de la première capture.<br>
+            - <strong>C</strong> est le nombre d'individus capturés lors de la phase de recapture.<br>
+            - <strong>R</strong> est le nombre d'individus marqués recapturés.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  
+    <h3>Précautions à prendre pour ne pas fausser les résultats</h3>
+    <ul>
+      <li><strong>Ne pas perturber l’habitat naturel :</strong> Lorsque vous capturez des créatures, il est crucial de ne pas perturber leur environnement naturel de manière significative. Ne détruisez pas les nids, les zones de repos ou les terrains de chasse. Un environnement perturbé pourrait amener les créatures à fuir ou à changer de comportement, ce qui fausserait les résultats.</li>
+      <li><strong>Ne pas capturer trop d’individus :</strong> Si vous capturez trop de créatures dans une zone donnée, vous risquez d'épuiser la population locale, ce qui pourrait biaiser les résultats du marquage et de la recapture. La proportion d'individus marqués dans l’échantillon doit rester suffisamment faible pour que le calcul de la population soit représentatif.</li>
+      <li><strong>Ne pas modifier le comportement des créatures :</strong> Il est essentiel de veiller à ce que le marquage n’affecte pas les comportements naturels des créatures, comme leur capacité à se nourrir, se défendre ou interagir avec leurs congénères. Si les créatures se sentent menacées par le marquage, elles risquent de changer de comportement (par exemple, éviter les zones de capture ou devenir plus vulnérables aux prédateurs).</li>
+      <li><strong>Ne pas relâcher trop rapidement :</strong> Relâcher trop tôt après la capture pourrait ne pas permettre aux créatures de se réadapter correctement à leur environnement, ce qui fausserait la recapture. Laissez-leur suffisamment de temps pour se réintégrer à leur groupe social et se comporter naturellement avant de revenir pour les recapturer.</li>
+      <li><strong>Éviter la surcapturer d'individus déjà marqués :</strong> Lors de la phase de recapture, assurez-vous de ne pas capturer un trop grand nombre d’individus déjà marqués. Cela pourrait fausser l'estimation de la population totale en rendant la proportion marquée trop élevée. Veillez à capturer un échantillon représentatif de la population, pas seulement ceux qui sont marqués.</li>
+      <li><strong>Respecter l’équilibre écologique :</strong> Ne réalisez pas des études sur les populations dans des zones déjà en danger ou écologiquement sensibles. Toute intervention humaine peut perturber l'équilibre fragile de ces écosystèmes. Assurez-vous que vos recherches n'endommagent pas davantage la biodiversité locale.</li>
+    </ul>
+  </div>  
+
+  <div id="archives" class="section">
+    <h2>Archives de la faune</h2>
+    <p>
+      Voici les études effectuées sur la faune d'Azeroth :
+    </p>
+    <h3>Études disponibles :</h3>
+    <ul>
+      <li><strong>Bestiaire :</strong> <a href="https://docs.google.com/presentation/d/1bEh9Cyx-sQam43NYb9cDkQr_Pv7SzBgQJvFgCm9SEAs/edit#slide=id.g3222148c8fb_2_7" target="_blank">Accéder à l'étude du bestiaire</a></li>
+    </ul>
+  </div>  
+
+  <script>
+    // Fonction JavaScript pour afficher les sections
+    function showSection(sectionId) {
+      // Cacher toutes les sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // Afficher la section demandée
+      const sectionToShow = document.getElementById(sectionId);
+      sectionToShow.classList.add('active');
+    }
+
+    // Afficher la section d'introduction par défaut
+    showSection('intro');
+  </script>
+
+</body>
+</html>
