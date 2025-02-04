@@ -7,26 +7,39 @@
   <style>
     /* Importation de la police inspirée de WoW */
     @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:ital@0;1&display=swap');
-
+  
     /* Style global du body */
     body {
       font-family: 'UnifrakturCook', cursive;
       background: linear-gradient(180deg, #0c0c1e 0%, #1a1a36 100%), url('https://wow.zamimg.com/images/logos/world-of-warcraft.svg') no-repeat center top;
-      background-size: contain;
+      background-size: cover; /* Optimisation du fond */
       color: #ffcc00;
       margin: 0;
       padding: 20px;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      transition: background-color 0.1s ease; /* Transition douce pour le fond */
     }
-
+  
+    /* Animation pour le fondu */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
     header {
       text-align: center;
       padding: 50px;
       background-color: rgba(0, 0, 0, 0.7);
       border-bottom: 3px solid #4b4b4b;
       margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards 0.1s; /* Animation de fondu pour le header */
     }
-
+  
     header h1 {
       font-size: 3.5em;
       margin: 0;
@@ -35,14 +48,14 @@
       color: #ffcc00;
       text-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
     }
-
+  
     header p {
       font-size: 1.5em;
       margin: 0;
       color: #ffcc00;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     }
-
+  
     /* Style de la navbar */
     nav {
       background-color: rgba(0, 0, 0, 0.8);
@@ -50,8 +63,10 @@
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
       border-bottom: 2px solid #ffcc00;
       margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 0.1s forwards 0.1s; /* Animation de fondu pour la navbar */
     }
-
+  
     nav ul {
       list-style-type: none;
       margin: 0;
@@ -59,12 +74,12 @@
       overflow: hidden;
       text-align: center;
     }
-
+  
     nav ul li {
       display: inline-block;
       margin-right: 25px;
     }
-
+  
     nav ul li a {
       color: #ffcc00;
       text-decoration: none;
@@ -73,14 +88,14 @@
       border: 2px solid #ffcc00;
       border-radius: 10px;
       font-size: 1.2em;
-      transition: background-color 0.3s, transform 0.2s;
+      transition: background-color 0.3s, transform 0.2s ease; /* Transition ajoutée pour les liens */
     }
-
+  
     nav ul li a:hover {
       background-color: #4b4b4b;
       transform: scale(1.1);
     }
-
+  
     /* Style des sections */
     .section {
       display: none;
@@ -89,39 +104,47 @@
       background-color: rgba(0, 0, 0, 0.8);
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      opacity: 0; /* Ajout d'une animation de disparition */
+      transition: opacity 1s ease-in-out; /* Transition pour l'apparition */
     }
-
+  
     .active {
       display: block;
+      opacity: 1; /* Apparition en douceur */
+      animation: fadeIn 1s forwards;
     }
-
+  
     h2 {
       color: #ffcc00;
       font-size: 2.5em;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
       margin-top: 0;
-      text-decoration: underline; /* Ajout de la ligne de soulignement */
+      text-decoration: underline;
+      opacity: 0;
+      animation: fadeIn 0.1s forwards 0.1s; /* Animation de fondu pour les titres */
     }
-
+  
     p, li {
       color: #ffffff;
       font-size: 1.2em;
       line-height: 1.5em;
+      opacity: 0;
+      animation: fadeIn 0.1s forwards 0.1s; /* Animation de fondu pour le texte */
     }
-    
+  
     ul {
       list-style-type: square;
       padding-left: 20px;
     }
-
+  
     li {
       margin: 10px 0;
     }
-    
+  
     strong {
-    color: #ffcc00;
-  }
-
+      color: #ffcc00;
+    }
+  
     footer {
       text-align: center;
       background-color: #2d2d2d;
@@ -131,8 +154,12 @@
       bottom: 0;
       color: #ffcc00;
       font-size: 1.2em;
+      transition: background-color 0.3s ease-in-out;
+      opacity: 0;
+      animation: fadeIn 0.1s forwards 0.2s; /* Animation de fondu pour le footer */
     }
   </style>
+  
 </head>
 <body>
 
